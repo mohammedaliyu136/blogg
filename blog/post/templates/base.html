@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Blog{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  </head>
+  <body>
+
+    <!-- Start Top Bar -->
+   <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle></button>
+  <div class="title-bar-title">Menu</div>
+</div>
+
+<div class="top-bar" id="main-menu">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text"><a href="/post/"><img src="http://ugolfingafrica.com/wp-content/uploads/2014/09/Blog-logo.png" alt="Blog"  style="width:70px;height:50px;"></a></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
+      <li><a href="/post/new">New Post</a></li>
+      <li><a href="/post/contact">Contact Us</a></li>
+      <li><a href="/post/about">About</a></li>
+    </ul>
+  </div>
+</div>
+    <!-- End Top Bar -->
+
+
+{% block body %}
+{% endblock %}
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+</body>
+</html>

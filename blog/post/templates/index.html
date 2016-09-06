@@ -1,0 +1,28 @@
+
+    
+{% extends 'base.html' %}
+
+{% block body %}
+    <!-- We can now combine rows and columns when there's only one column in that row -->
+    <div class="row medium-8 large-7 columns">
+    {% if posts %}
+    {% for postt in posts %}
+
+      <div class="blog-post">
+        <h3>{{ postt.title }}<small> {{ postt.date }}</small></h3>
+        <img class="thumbnail" src="{{postt.picture}}">
+        <p>{{ postt.post }}</p>
+        <div class="callout">
+          <ul class="menu simple">
+            <li><a href="#">Author: {{ postt.author }}</a></li>
+            <li><a href="#">Comments: 3</a></li>
+          </ul>
+        </div>
+      </div>
+        {% endfor %}
+    {% else %}
+       <p>No posts, care to create one or check again soon</p>
+    {% endif %}
+    </div>
+{% endblock %}
+    
